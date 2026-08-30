@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="en">
-    <head>
+<head>
         <title>石巻小字アーカイブ</title>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -16,15 +16,31 @@
         <meta name="mobile-web-app-capable" content="yes">
         <meta name="apple-mobile-web-app-capable" content="yes">
 
-        <link rel="stylesheet" href="./resources/ol.css">
-        <link rel="stylesheet" href="resources/fontawesome-all.min.css">
-        <link href="resources/photon-geocoder-autocomplete.min.css" rel="stylesheet">
-        <link rel="stylesheet" href="./resources/ol-layerswitcher.css">
-        <link rel="stylesheet" href="./resources/qgis2web.css">
+        <!-- Leaflet用のCSSを読み込み -->
+        <link rel="stylesheet" href="css/leaflet.css">
+        <link rel="stylesheet" href="css/L.Control.Layers.Tree.css">
+        <link rel="stylesheet" href="css/qgis2web.css">
+        <link rel="stylesheet" href="css/fontawesome-all.min.css">
         <link rel="icon" href="images/favicon.png" type="image/png">
 
+        <!-- 地図の高さを画面いっぱいに指定 -->
+        <style>
+        html, body {
+            width: 100%;
+            height: 100%;
+            padding: 0;
+            margin: 0;
+        }
+        #map {
+            width: 100%;
+            height: calc(100vh - 50px); /* フッターの分だけ引いた高さ */
+        }
+        footer {
+            height: 50px;
+            text-align: center;
+            background-color: #f8f9fa;
+        }
         </style>
-        <title></title>
     </head>
     <body>
         <div id="map">
