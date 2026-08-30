@@ -98,8 +98,12 @@
         <script src="js/labelgun.min.js"></script>
         <script src="js/labels.js"></script>
         <script src="js/leaflet.photon.js"></script>
-        <script src="data/_1.js"></script>
-        <script src="data/_2.js"></script>
+        <script>
+        var labels = [];
+            var totalMarkers = 0;
+        </script>
+        <script src="data/layer1.js"></script>
+        <script src="data/layer2.js"></script>
 
         <script>
         var map = L.map('map', {
