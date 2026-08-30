@@ -337,7 +337,8 @@
                 if (map.hasLayer(layer__1)) {
                    if (map.getZoom() >= 15 && map.getZoom() <= 19) {
                        layer__1.eachLayer(function (layer) {
-                           layer.openTooltip();
+                           if (layer.getLatLngs && layer.getLatLngs().length > 0) {
+                              layer.openTooltip();
                        });
                     } else {
                        layer__1.eachLayer(function (layer) {
@@ -361,6 +362,7 @@
 
         var i = 0;
         layer__1.eachLayer(function(layer) {
+            if (!layer.getLatLngs || layer.getLatLngs().length === 0) return;
             var context = {
                 feature: layer.feature,
                 variables: {}
@@ -390,7 +392,8 @@
                 if (map.hasLayer(layer__1)) {
                    if (map.getZoom() >= 15 && map.getZoom() <= 19) {
                        layer__1.eachLayer(function (layer) {
-                           layer.openTooltip();
+                           if (layer.getLatLngs && layer.getLatLngs().length > 0) {
+                              layer.openTooltip();
                        });
                     } else {
                        layer__1.eachLayer(function (layer) {
