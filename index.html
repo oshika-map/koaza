@@ -17,7 +17,6 @@
         <meta name="apple-mobile-web-app-capable" content="yes">
 
         <link rel="stylesheet" href="css/leaflet.css">
-        <link rel="stylesheet" href="css/L.Control.Layers.Tree.css">
         <link rel="stylesheet" href="css/qgis2web.css">
         <link rel="stylesheet" href="css/fontawesome-all.min.css">
         <link rel="icon" href="images/favicon.png" type="image/png">
@@ -31,6 +30,32 @@
             background-color: #ffffff;
             display: flex;
             flex-direction: column;
+        }
+        header {
+            background-color: #ffffff;
+            border-bottom: 1px solid #e0e0e0;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+        }
+        #logo img {
+            display: block;
+            height: 40px;
+        }
+        .about-link {
+            text-decoration: none;
+            color: #0066cc;
+            font-weight: bold;
+            padding: 6px 12px;
+            border: 1px solid #0066cc;
+            border-radius: 4px;
+            transition: background-color 0.2s;
+        }
+        .about-link:hover {
+            background-color: #0066cc;
+            color: #ffffff;
         }
         #map {
             width: 100%;
@@ -53,12 +78,18 @@
         </style>
     </head>
     <body>
-        <div id="map">
-        </div>
+
+        <header id="header">
+            <a href="./" id="logo">
+                <img src="./images/header.png" alt="石巻小字アーカイブ">
+            </a>
+            <a href="./about.html" class="about-link">about</a>
+        </header>
+
+        <div id="map"></div>
 
         <script src="js/qgis2web_expressions.js"></script>
         <script src="js/leaflet.js"></script>
-        <script src="js/L.Control.Layers.Tree.min.js"></script>
         <script src="js/leaflet.rotatedMarker.js"></script>
         <script src="js/leaflet.pattern.js"></script>
         <script src="js/leaflet-hash.js"></script>
@@ -299,7 +330,7 @@
 
         map.on("zoomend", function(){
                 if (map.hasLayer(layer__1)) {
-                    if (map.getZoom() <= 13 && map.getZoom() >= 19) {
+                    if (map.getZoom() >= 13 && map.getZoom() <= 19) {
                         layer__1.eachLayer(function (layer) {
                             layer.openTooltip();
                         });
@@ -310,7 +341,7 @@
                     }
                 }
                 if (map.hasLayer(layer__2)) {
-                    if (map.getZoom() <= 11 && map.getZoom() >= 13) {
+                    if (map.getZoom() >= 11 && map.getZoom() <= 13) {
                         layer__2.eachLayer(function (layer) {
                             layer.openTooltip();
                         });
@@ -352,7 +383,7 @@
         });
 
                 if (map.hasLayer(layer__1)) {
-                    if (map.getZoom() <= 13 && map.getZoom() >= 19) {
+                    if (map.getZoom() >= 13 && map.getZoom() <= 19) {
                         layer__1.eachLayer(function (layer) {
                             layer.openTooltip();
                         });
@@ -363,7 +394,7 @@
                     }
                 }
                 if (map.hasLayer(layer__2)) {
-                    if (map.getZoom() <= 11 && map.getZoom() >= 13) {
+                    if (map.getZoom() >= 11 && map.getZoom() <= 13) {
                         layer__2.eachLayer(function (layer) {
                             layer.openTooltip();
                         });
