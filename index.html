@@ -75,6 +75,18 @@
             font-size: 0.85rem;
             color: #555555;
         }
+        .leaflet-tooltip {
+            background: transparent !important;
+            border: none !important;
+            box-shadow: none !important;
+            padding: 0 !important;
+        }
+       .leaflet-tooltip-left::before,
+       .leaflet-tooltip-right::before,
+       .leaflet-tooltip-above::before,
+       .leaflet-tooltip-below::before {
+       display: none !important;
+       }
         </style>
     </head>
     <body>
@@ -228,37 +240,22 @@
         function style__1_0(feature) {
             switch(String(feature.properties['oaza'])) {
                 case '蛇田':
-                    return { pane: 'pane__1', opacity: 1, color: 'rgba(0,0,0,1.0)', dashArray: '', lineCap: 'butt', lineJoin: 'miter', weight: 1.0, fill: true, fillOpacity: 1, fillColor: 'rgba(43,171,217,1.0)', interactive: true }
+                    return { pane: 'pane__1', opacity: 1, color: 'rgba(0,0,0,1.0)', dashArray: '', lineCap: 'butt', lineJoin: 'miter', weight: 1.0, fill: true, fillOpacity: 0.5, fillColor: 'rgba(43,171,217,1.0)', interactive: true }
                     break;
                 case '石巻':
-                    return { pane: 'pane__1', opacity: 1, color: 'rgba(35,35,35,1.0)', dashArray: '', lineCap: 'butt', lineJoin: 'miter', weight: 1.0, fill: true, fillOpacity: 1, fillColor: 'rgba(251,154,153,1.0)', interactive: true }
+                    return { pane: 'pane__1', opacity: 1, color: 'rgba(35,35,35,1.0)', dashArray: '', lineCap: 'butt', lineJoin: 'miter', weight: 1.0, fill: true, fillOpacity: 0.5, fillColor: 'rgba(251,154,153,1.0)', interactive: true }
                     break;
                 case '門脇':
-                    return { pane: 'pane__1', opacity: 1, color: 'rgba(35,35,35,1.0)', dashArray: '', lineCap: 'butt', lineJoin: 'miter', weight: 2.0, fill: true, fillOpacity: 1, fillColor: 'rgba(208,228,45,1.0)', interactive: true }
+                    return { pane: 'pane__1', opacity: 1, color: 'rgba(35,35,35,1.0)', dashArray: '', lineCap: 'butt', lineJoin: 'miter', weight: 2.0, fill: true, fillOpacity: 0.5, fillColor: 'rgba(208,228,45,1.0)', interactive: true }
                     break;
                 default:
-                    return { pane: 'pane__1', opacity: 1, color: 'rgba(35,35,35,1.0)', dashArray: '', lineCap: 'butt', lineJoin: 'miter', weight: 1.0, fill: true, fillOpacity: 1, fillColor: 'rgba(230,119,154,1.0)', interactive: true }
-                    break;
-                case '水越':
-                    return { pane: 'pane__1', opacity: 1, color: 'rgba(35,35,35,1.0)', dashArray: '', lineCap: 'butt', lineJoin: 'miter', weight: 1.0, fill: true, fillOpacity: 1, fillColor: 'rgba(182,242,220,1.0)', interactive: true }
-                    break;
-                case '浅部':
-                    return { pane: 'pane__1', opacity: 1, color: 'rgba(35,35,35,1.0)', dashArray: '', lineCap: 'butt', lineJoin: 'miter', weight: 1.0, fill: true, fillOpacity: 1, fillColor: 'rgba(255,127,0,1.0)', interactive: true }
-                    break;
-                case '気仙沼':
-                    return { pane: 'pane__1', opacity: 1, color: 'rgba(35,35,35,1.0)', dashArray: '', lineCap: 'butt', lineJoin: 'miter', weight: 1.0, fill: true, fillOpacity: 1, fillColor: 'rgba(185,45,231,1.0)', interactive: true }
-                    break;
-                case '鹿又':
-                    return { pane: 'pane__1', opacity: 1, color: 'rgba(35,35,35,1.0)', dashArray: '', lineCap: 'butt', lineJoin: 'miter', weight: 1.0, fill: true, fillOpacity: 1, fillColor: 'rgba(53,39,206,1.0)', interactive: true }
+                    return { pane: 'pane__1', opacity: 1, color: 'rgba(35,35,35,1.0)', dashArray: '', lineCap: 'butt', lineJoin: 'miter', weight: 1.0, fill: true, fillOpacity: 0.5, fillColor: 'rgba(230,119,154,1.0)', interactive: true }
                     break;
                 case '前谷地':
-                    return { pane: 'pane__1', opacity: 1, color: 'rgba(35,35,35,1.0)', dashArray: '', lineCap: 'butt', lineJoin: 'miter', weight: 1.0, fill: true, fillOpacity: 1, fillColor: 'rgba(174,169,35,1.0)', interactive: true }
-                    break;
-                case '湊':
-                    return { pane: 'pane__1', opacity: 1, color: 'rgba(35,35,35,1.0)', dashArray: '', lineCap: 'butt', lineJoin: 'miter', weight: 1.0, fill: true, fillOpacity: 1, fillColor: 'rgba(51,160,44,1.0)', interactive: true }
+                    return { pane: 'pane__1', opacity: 1, color: 'rgba(35,35,35,1.0)', dashArray: '', lineCap: 'butt', lineJoin: 'miter', weight: 1.0, fill: true, fillOpacity: 0.5, fillColor: 'rgba(174,169,35,1.0)', interactive: true }
                     break;
                 case '番外':
-                    return { pane: 'pane__1', opacity: 1, color: 'rgba(35,35,35,1.0)', dashArray: '', lineCap: 'butt', lineJoin: 'miter', weight: 1.0, fill: true, fillOpacity: 1, fillColor: 'rgba(0,0,0,1.0)', interactive: true }
+                    return { pane: 'pane__1', opacity: 1, color: 'rgba(35,35,35,1.0)', dashArray: '', lineCap: 'butt', lineJoin: 'miter', weight: 1.0, fill: true, fillOpacity: 0.5, fillColor: 'rgba(0,0,0,1.0)', interactive: true }
                     break;
             }
         }
@@ -364,7 +361,7 @@
                 feature: layer.feature,
                 variables: {}
             };
-            layer.bindTooltip((layer.feature.properties['koaza'] !== null?String('<div style="color: #000000; font-size: 10pt; font-family: \'Cambria\', sans-serif;">' + layer.feature.properties['koaza']) + '</div>':''), {permanent: true, offset: [-0, -16], className: 'css__1'});
+            layer.bindTooltip((layer.feature.properties['koaza'] !== null?String('<div style="color: #000000; font-size: 10pt; font-family: \'Cambria\', sans-serif;">' + layer.feature.properties['koaza']) + '</div>':''), {permanent: true, direction: 'center', offset: [0, 0], className: 'css__1'});
             labels.push(layer);
             totalMarkers += 1;
               layer.added = true;
@@ -378,7 +375,7 @@
                 feature: layer.feature,
                 variables: {}
             };
-            layer.bindTooltip((layer.feature.properties['jichitai'] !== null?String('<div style="color: #323232; font-size: 25pt; font-weight: bold; font-family: \'Noto Serif JP Black\', sans-serif;">' + layer.feature.properties['jichitai']) + '</div>':''), {permanent: true, offset: [-0, -16], className: 'css__2'});
+            layer.bindTooltip((layer.feature.properties['jichitai'] !== null?String('<div style="color: #323232; font-size: 25pt; font-weight: bold; font-family: \'Noto Serif JP Black\', sans-serif;">' + layer.feature.properties['jichitai']) + '</div>':''), {permanent: true, direction: 'center', offset: [0, 0], className: 'css__1'});
             labels.push(layer);
             totalMarkers += 1;
               layer.added = true;
