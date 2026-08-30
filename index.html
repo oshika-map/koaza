@@ -16,6 +16,10 @@
         <meta name="mobile-web-app-capable" content="yes">
         <meta name="apple-mobile-web-app-capable" content="yes">
 
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:site" content="@ishinomaki_wiki" />
+        <meta name="twitter:creator" content="@ishinomaki_wiki">
+
         <link rel="stylesheet" href="css/leaflet.css">
         <link rel="stylesheet" href="css/qgis2web.css">
         <link rel="stylesheet" href="css/fontawesome-all.min.css">
@@ -331,18 +335,18 @@
 
         map.on("zoomend", function(){
                 if (map.hasLayer(layer__1)) {
-                    if (map.getZoom() >= 13 && map.getZoom() <= 19) {
-                        layer__1.eachLayer(function (layer) {
-                            layer.openTooltip();
-                        });
+                   if (map.getZoom() >= 15 && map.getZoom() <= 19) {
+                       layer__1.eachLayer(function (layer) {
+                           layer.openTooltip();
+                       });
                     } else {
-                        layer__1.eachLayer(function (layer) {
-                            layer.closeTooltip();
-                        });
+                       layer__1.eachLayer(function (layer) {
+                           layer.closeTooltip();
+                       });
                     }
                 }
                 if (map.hasLayer(layer__2)) {
-                    if (map.getZoom() >= 11 && map.getZoom() <= 13) {
+                    if (map.getZoom() >= 11 && map.getZoom() <= 14) {
                         layer__2.eachLayer(function (layer) {
                             layer.openTooltip();
                         });
@@ -384,18 +388,18 @@
         });
 
                 if (map.hasLayer(layer__1)) {
-                    if (map.getZoom() >= 13 && map.getZoom() <= 19) {
-                        layer__1.eachLayer(function (layer) {
-                            layer.openTooltip();
-                        });
+                   if (map.getZoom() >= 15 && map.getZoom() <= 19) {
+                       layer__1.eachLayer(function (layer) {
+                           layer.openTooltip();
+                       });
                     } else {
-                        layer__1.eachLayer(function (layer) {
-                            layer.closeTooltip();
-                        });
+                       layer__1.eachLayer(function (layer) {
+                           layer.closeTooltip();
+                       });
                     }
                 }
                 if (map.hasLayer(layer__2)) {
-                    if (map.getZoom() >= 11 && map.getZoom() <= 13) {
+                    if (map.getZoom() >= 11 && map.getZoom() <= 14) {
                         layer__2.eachLayer(function (layer) {
                             layer.openTooltip();
                         });
