@@ -5,28 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>このサイトについて - 石巻小字アーカイブ</title>
 
-        <meta property="og:title" content="このサイトについて - 石巻小字アーカイブ">
-        <meta property="og:description" content="石巻小字アーカイブの概要や注意事項、更新履歴について">
-        <meta property="og:type" content="website">
-        <meta property="og:url" content="https://oshika-map.github.io/koaza/about.html">
-        <meta property="og:image" content="https://oshika-map.github.io/koaza/images/ogp.png">
-        <meta property="og:site_name" content="石巻小字アーカイブ">
+    <meta property="og:title" content="このサイトについて - 石巻小字アーカイブ">
+    <meta property="og:description" content="石巻小字アーカイブの概要や注意事項、更新履歴について">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://oshika-map.github.io/koaza/about.html">
+    <meta property="og:image" content="https://oshika-map.github.io/koaza/images/ogp.png">
+    <meta property="og:site_name" content="石巻小字アーカイブ">
 
-        <meta name="twitter:card" content="summary" />
-        <meta name="twitter:site" content="@ishinomaki_wiki" />
-        <meta name="twitter:creator" content="@ishinomaki_wiki">
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@ishinomaki_wiki" />
+    <meta name="twitter:creator" content="@ishinomaki_wiki">
 
-        <link rel="icon" href="images/favicon.png" type="image/png">
+    <link rel="icon" href="images/favicon.png" type="image/png">
+
+    <!-- Noto Sans JP の読み込みを追加 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
 
     <style>
         body {
-            font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+            font-family: "Helvetica Neue", Arial, 'Noto Sans JP', "Hiragino Sans", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
             line-height: 1.6;
             color: #333;
             max-width: 800px;
             margin: 0 auto;
             padding: 20px;
-            background-color: #f8f9fa;
+            background-color: #f0f8ff;
         }
         header {
             border-bottom: 2px solid #2c3e50;
@@ -46,7 +51,7 @@
             font-size: 1.1rem;
             font-weight: bold;
             margin-bottom: 20px;
-}
+        }
         h3 {
             font-size: 1.1rem;
             color: #2c3e50;
@@ -67,14 +72,6 @@
         }
         a:hover {
             text-decoration: underline;
-        }
-        .license-box {
-            background-color: #fff;
-            border: 1px solid #e9ecef;
-            border-radius: 6px;
-            padding: 15px;
-            margin-bottom: 15px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
         }
         .btn-back {
             display: inline-block;
@@ -102,12 +99,16 @@
 </head>
 <body>
 
-    <header>
-        <h1>このサイトについて</h1>
-    </header>
+    <header id="header">
+            <a href="./" id="logo">
+                <img src="./images/header.png" alt="石巻小字アーカイブ">
+            </a>
+            <a href="./about.html" class="about-link">about</a>
+        </header>
 
     <main>
         <section>
+            <h1>このサイトについて</h1>
             <h2>概要</h2>
             <p>本サイトは、石巻市を中心とした宮城県北部の町村制施行～戦前の期間における小字境界を閲覧できるようにしたWeb地図プロジェクトです。</p>
         </section>
@@ -125,6 +126,11 @@
                 <li>2026-08-30：サイト開設。</li>
             </ul>
         </section>
+
+        <section>
+            <h2>お問い合わせ</h2>
+            <p>ご意見等は管理人のX（旧Twitter）<a href="https://x.com/ishinomaki_wiki">アカウント</a>までよろしくお願いします。</p>
+        </section> <!-- sectionの閉じタグを追加 -->
 
         <a href="index.html" class="btn-back">← 地図に戻る</a>
     </main>
